@@ -1,0 +1,20 @@
+<ul>
+  <li><a href="/home/home.view.html">Home</a></li>
+  <li><a href="#news">Food Search</a></li>
+  <li><a href="#contact">What's in that food?</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+<h3>What Can You Make?</h3>
+<h4>Search for anything that you have in your refridgerator and see what you can make with that item.</h4>
+<form ng-submit="vm.foodsearch()">
+    <input id = "enter" type="text" ng-model='vm.userInput'>
+    <input id ="submit" type="submit" value = "Search for Food!">
+    <input TYPE="button" onClick="history.go(0)" VALUE="Refresh The Page">
+</form>
+
+<div ng-repeat="x in vm.arrayOfFoods track by $index" id="box">
+    <p>{{x.a}}</p>
+    <p>{{x.b}}</p>
+    <p>{{x.c}}</p>
+    <p>{{x.d}}</p>
+</div>

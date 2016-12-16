@@ -1,8 +1,59 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#box {border-style: solid;
+    color: #616D7E;
 }
 
-a {
-  color: #00B7FF;
+h3{
+    color: #616D7E;
+}
+
+h4{
+    color: #616D7E;
+}
+
+div {color: black;}
+
+body {
+    background-color: #E3E6E5;
+}
+
+
+input[type=text] {
+    width: 80px;
+    box-sizing: border-box;
+    border: 2px solid #616D7E;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #E3E6E5;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px 2px 2px 4px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 30%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #616D7E;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #488AC7;
 }
