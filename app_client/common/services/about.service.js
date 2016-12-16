@@ -4,10 +4,21 @@ angular
 
    
     function aboutApp(string) {
-        <p>
-        This app just searches a site for a list of foods that you can make. 
-        Lets say you just have hambuger meet in your fridge, you constantly think
-        about what you can make with the item that you have. Well now you don't have to look.
-        You just have to search for what you have and this app will tell you everything about what to make!
-        </p>
+        var getData = function(q) {
+        return $http.jsonp("https://api.yummly.com/v1/api/recipes?callback=JSON_CALLBACK" , {
+          params: {
+            "_app_id": '27e2db15',
+            "_app_key": '784ff087b8430b6ce6e5ad2688c695d0',
+            "q": q,
+            "maxResult": 6,
+            //"allowedAllergy[]": ["Seafood-Free"],
+            //"requirePictures": true
           }
+        });      
+        };        
+
+        return {
+            getData: getData,
+            
+        };
+    }

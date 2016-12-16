@@ -5,7 +5,6 @@ angular
     
 function awesomefoods (yummlyAPI){
     var vm = this;
-    vm.foods = "Hello World!";
     vm.arrayOfFoods = [];
     var yum;
     vm.foodsearch = function(){
@@ -18,7 +17,7 @@ function awesomefoods (yummlyAPI){
                 }
                vm.arrayOfFoods.push({a: 'Recepie name : ' + yum.data.matches[i].recipeName, 
                                     b: 'Ingredients : ' + ing,
-                                     c: 'Time to cook : ' + yum.data.matches[i].totalTimeInSeconds,
+                                     c: 'Time to cook (seconds) : ' + yum.data.matches[i].totalTimeInSeconds,
                                      d: 'rating : ' + yum.data.matches[i].rating
                });
             }
